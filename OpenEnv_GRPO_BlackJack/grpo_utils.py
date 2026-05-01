@@ -296,7 +296,7 @@ class EnvironmentActor(ForgeActor):
     """Actor that manages OpenEnv connections and tokenizer."""
 
     server_url: str = "http://localhost:8004"
-    model: str = "Qwen/Qwen2.5-1.5B-Instruct"
+    model: str = "Qwen/Qwen3-1.7B"
 
     @endpoint
     def setup(self):
