@@ -18,8 +18,8 @@ from io import BytesIO
 
 # Together AI configuration
 TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY")
-TOGETHER_BASE_URL = "https://api.together.xyz/v1"
-TOGETHER_MODEL = "Qwen/Qwen3-VL-32B-Instruct"
+TOGETHER_BASE_URL = "https://api.together.ai/v1"
+TOGETHER_MODEL = "Qwen/Qwen3.5-397B-A17B"
 
 
 def get_client():
@@ -33,7 +33,7 @@ def get_client():
     if not api_key:
         raise ValueError(
             "TOGETHER_API_KEY environment variable not set. "
-            "Get your API key from https://api.together.xyz/settings/api-keys"
+            "Get your API key from https://api.together.ai/settings/api-keys"
         )
     return openai.OpenAI(
         api_key=api_key,
